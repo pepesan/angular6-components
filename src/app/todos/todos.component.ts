@@ -24,6 +24,16 @@ export class TodosComponent implements OnInit {
     // console.log(this);
     const mitodo = { text: this.todo.text };
     this.todos.push(mitodo);
+    this.todo.text = '';
+  }
+  // Método que borra un elemento del listado
+  deleteTodo(texto) {
+    for ( let i = 0; i < this.todos.length ; i++) {
+      const todo = this.todos[i];
+      if ( todo.text === texto) {
+        this.todos.splice(i, 1);
+      }
+    }
   }
 
 }
