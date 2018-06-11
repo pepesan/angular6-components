@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TodoService} from '../todo.service';
 
+
 @Component({
   selector: 'app-todos',
   templateUrl: './todos.component.html',
@@ -11,7 +12,9 @@ export class TodosComponent implements OnInit {
   todos;
   // Nueva propiedad para coger datos del formulario
   todo;
-  constructor(private _todoService: TodoService) { }
+  // Nueva propiedad para almacenar los datos de la petición
+  partidos = this._todoService.getData().toPromise();
+  constructor(protected _todoService: TodoService) { }
   ngOnInit() {
     // Rellenamos el objeto con datos
     this.todos = [

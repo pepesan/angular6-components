@@ -9,3 +9,9 @@
       button>
     </li>
 </ul>
+<h3>Listado de partidos</h3>
+<ul>
+  <li *ngFor="let partido of partidos | async">
+    {{partido.nombre}}
+  </li>
+</ul>

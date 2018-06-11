@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
 import { TodoService } from './todo.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { TodoService } from './todo.service';
   ],
   imports: [
       BrowserModule,
-      FormsModule
+      FormsModule,
+      HttpClientModule
   ],
   providers: [TodoService],
   bootstrap: [AppComponent]
