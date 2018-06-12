@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
 import { TodoService } from './todo.service';
 import { HttpClientModule } from '@angular/common/http';
+import { EventosComponent } from './eventos/eventos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodosComponent
+    TodosComponent,
+    EventosComponent
   ],
   imports: [
       BrowserModule,
