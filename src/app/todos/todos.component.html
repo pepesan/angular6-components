@@ -11,7 +11,7 @@
 </ul>
 <h3>Listado de partidos</h3>
 <ul>
-  <li *ngFor="let partido of partidos | async">
-    {{partido.nombre}}
+  <li *ngFor="let resultado of partidos | async">
+    {{resultado.nombre}}: {{resultado.dipu}} <img src="http://cursosdedesarrollo.com/pactometro/img/{{resultado.imagen}}" width="90px" height="40px"/>
   </li>
 </ul>

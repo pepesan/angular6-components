@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {catchError} from 'rxjs/operators';
-
+import {Partido} from './partido';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class TodoService {
     console.log('TodoService inicializado...');
   }
   getData() {
-    return this._httpClient.get(this.url)
+    return this._httpClient.get<Observable<Partido[]>>(this.url)
       .pipe(
         catchError(this.handleError('get', []))
       );
