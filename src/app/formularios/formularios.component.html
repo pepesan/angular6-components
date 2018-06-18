@@ -32,6 +32,25 @@
 
   </div>
   <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password"
+           [(ngModel)]="model.password" name="password" required="required" #password="ngModel">
+    <div [hidden]="password.valid || password.pristine"
+         class="alert alert-danger">
+      Password is required
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="repeatPassword">Repeat Password</label>
+    <input type="password" class="form-control" id="repeatPassword"
+           [(ngModel)]="model.repeatPassword" name="repeatPassword"
+           required="required" validateEqual="password" #repeatPassword="ngModel">
+  </div>
+  <div [hidden]="repeatPassword.valid || repeatPassword.pristine"
+       class="alert alert-danger">
+    La contraseña no coincide
+  </div>
+  <div class="form-group">
     <label for="power">Hero Power</label>
     <select class="form-control" id="power"
             required

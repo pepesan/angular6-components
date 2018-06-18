@@ -5,6 +5,8 @@ export class Hero {
     public power: string,
     public alterEgo?: string,
     public status: boolean = true,
-    public sex: string = 'woman'
+    public sex: string = 'woman',
+    public password: string = '',
+    public repeatPassword: string = '',
   ) {  }
 }

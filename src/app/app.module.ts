@@ -8,13 +8,14 @@ import { TodoService } from './todo.service';
 import { HttpClientModule } from '@angular/common/http';
 import { EventosComponent } from './eventos/eventos.component';
 import { FormulariosComponent } from './formularios/formularios.component';
-
+import {EqualValidator} from './formularios/equal-validator.directive';
 @NgModule({
   declarations: [
     AppComponent,
     TodosComponent,
     EventosComponent,
-    FormulariosComponent
+    FormulariosComponent,
+    EqualValidator
   ],
   imports: [
       BrowserModule,
