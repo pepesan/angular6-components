@@ -1,4 +1,4 @@
-<form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+<form (submit)="onSubmit()" #heroForm="ngForm">
   <div class="form-group">
     <label for="name">Name</label>
     <input type="text" class="form-control" id="name"
@@ -14,6 +14,22 @@
     <label for="alterEgo">Alter Ego</label>
     <input type="text" class="form-control" id="alterEgo"
            [(ngModel)]="model.alterEgo" name="alterEgo">
+  </div>
+
+    <div class="checkbox">
+      <label for="status"><input type="checkbox" class="" id="status"
+                                 [(ngModel)]="model.status" name="status"/>Status</label>
+    </div>
+
+
+
+  <div class="radio">
+    <label for="sex-man"><input type="radio" class="" id="sex-man"
+                                [(ngModel)]="model.sex" name="sex" value="man">Man</label>
+
+    <label for="sex-woman"><input type="radio" class="" id="sex-woman"
+                                  [(ngModel)]="model.sex" name="sex" value="woman">Woman</label>
+
   </div>
   <div class="form-group">
     <label for="power">Hero Power</label>
