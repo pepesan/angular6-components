@@ -8,5 +8,6 @@ export class Hero {
     public sex: string = 'woman',
     public password: string = '',
     public repeatPassword: string = '',
+    public email: string = ''
   ) {  }
 }
