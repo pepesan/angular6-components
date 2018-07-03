@@ -8,9 +8,15 @@
         {{todo.text}} <button (click)="deleteTodo(todo.text)" >Borrar</button>
     </li>
 </ul>
-<h3>Listado de partidos</h3>
+<h3>Listado de partidos con async</h3>
 <ul>
   <li *ngFor="let resultado of partidos | async">
+    {{resultado.nombre}}: {{resultado.dipu}} <img src="http://cursosdedesarrollo.com/pactometro/img/{{resultado.imagen}}" width="90px" height="40px"/>
+  </li>
+</ul>
+<h3>Listado de partidos sin async y postprocesado</h3>
+<ul>
+  <li *ngFor="let resultado of partidosFinal">
     {{resultado.nombre}}: {{resultado.dipu}} <img src="http://cursosdedesarrollo.com/pactometro/img/{{resultado.imagen}}" width="90px" height="40px"/>
   </li>
 </ul>

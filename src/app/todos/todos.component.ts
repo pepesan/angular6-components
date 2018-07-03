@@ -13,6 +13,8 @@ export class TodosComponent implements OnInit {
   todo;
   // Nueva propiedad para almacenar los datos de la petición
   partidos = this._todoService.getData().toPromise();
+  partidosObservable = this._todoService.getData();
+  partidosFinal = [];
   constructor(protected _todoService: TodoService) { }
   ngOnInit() {
     // Rellenamos el objeto con datos
@@ -21,6 +23,14 @@ export class TodosComponent implements OnInit {
       { 'text': 'revisar el coche' }
     ];
     this.todo = {'text' : ''};
+  this.partidosObservable.subscribe((data) => {
+    console.log(data);
+    // data.subscribe(console.log);
+    data.forEach( (value) =>
+      this.partidosFinal.push(value)
+    );
+    console.log(this.partidosFinal);
+  });
   }
   // Nuevo método para manejar el formulario
   addTodo() {
