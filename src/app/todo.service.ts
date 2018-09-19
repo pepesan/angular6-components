@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class TodoService {
-  url = 'http://cursosdedesarrollo.com/pactometro/resultados.json';
+  url = 'https://cursosdedesarrollo.com/pactometro/resultados.json';
   constructor(private _httpClient: HttpClient) {
     console.log('TodoService inicializado...');
   }
